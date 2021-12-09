@@ -116,42 +116,4 @@ pub fn part2(lines: String) -> i32{
  *
  *
  */
-/*		let mut displays:Vec<_> = l.split(" ").collect::<Vec<_>>();
-		displays.remove(10);
-		let mut uniques = displays.to_vec();
-		//uniques.retain(|x| {let z = x.len(); z == 2 || z == 3 || z == 4 || z == 7});
-		//let mut poss: [Vec<u8>; 7] = [vec![],vec![],vec![],vec![],vec![],vec![],vec![]];
-		
-		for digit in uniques{
-			let mut bytes_digits:Vec<u8> = Vec::new();
-			for i in digit.as_bytes().iter(){
-				bytes_digits.push(*i - ASCII_START);
-			}
-
-			if digit.len() == 2{
-				// this is 1
-				poss[2].append(&mut bytes_digits);
-				poss[5].append(&mut bytes_digits);
-			}else if digit.len() == 3{
-				// this is 7
-				poss[2].append(&mut bytes_digits);
-				poss[5].append(&mut bytes_digits);
-			}else if digit.len() == 4{
-				// this is 1
-				poss[2].append(&mut bytes_digits);
-				poss[5].append(&mut bytes_digits);
-			} else if digit.len() == 7{
-				// this is 1
-				poss[2].append(&mut bytes_digits);
-				poss[5].append(&mut bytes_digits);
-			}
-
-
-
-		}
-		
-	}
-	return 4;
-}
-*/
 
