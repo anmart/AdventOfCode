@@ -14,7 +14,7 @@ pub fn part1(lines: String) -> i32{
 }
 
 #[allow(dead_code)]
-pub fn part2(lines: String) -> i32{
+pub fn part2(lines: String) -> u64{
 	
 	let mut fishies: [u64;9] = [0;9];
 	
@@ -25,6 +25,5 @@ pub fn part2(lines: String) -> i32{
 	// this is so stupid, literally just use a for loop
 	(0..256).for_each(|i| fishies[(i+7)%9] += fishies[i%9]);
 
-	println!("{}", fishies.iter().sum::<u64>());
-	return 0;
+	return fishies.iter().sum::<u64>();
 }
