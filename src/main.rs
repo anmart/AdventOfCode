@@ -8,6 +8,7 @@ mod day07;
 mod day08;
 mod day09;
 mod day10;
+mod day11;
 mod helper;
 
 use std::time::Instant;
@@ -17,12 +18,12 @@ fn main() {
 	let _before_io = Instant::now();
 
 	// read data
-	let data = read_file_to_string("./data/day10").unwrap();
+	let data = read_file_to_string("./data/day11").unwrap();
 
 	// get current time for benchmarking
 	let _before_run = Instant::now();
 
-	println!("{}", day10::part2(data));
+	println!("{}", day11::part2(data));
 
 	// print benchmark results
 	println!("Elapsed time: {:?}", _before_run.elapsed());
