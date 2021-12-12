@@ -58,7 +58,7 @@ pub fn find_score(board: &[[i8;5];5], guess: i8) -> i32{
 }
 
 #[allow(dead_code)]
-pub fn part1(lines: String) -> i32{
+pub fn part1(lines: String) -> String{
 	let mut lines = lines.lines();
 	let guesses = lines.next().unwrap().split(",");
 	let mut boards = get_boards(lines);
@@ -73,7 +73,7 @@ pub fn part1(lines: String) -> i32{
 						b[r][c] *= -1;
 						// check for bingo
 						if check_bingo(b,r,c){
-							return find_score(b,g);
+							return find_score(b,g).to_string();
 						}
 					}
 				}
@@ -81,11 +81,11 @@ pub fn part1(lines: String) -> i32{
 		}
 	}
 
-	return 696969;
+	return String::from("Error, not found.");
 }
 
 #[allow(dead_code)]
-pub fn part2(lines: String) -> i32{
+pub fn part2(lines: String) -> String{
 	let mut lines = lines.lines();
 	let guesses = lines.next().unwrap().split(",");
 	let mut boards = get_boards(lines);
@@ -111,12 +111,12 @@ pub fn part2(lines: String) -> i32{
 		for id in finished_board_ids.iter().rev(){
 			if boards.len() == 1 {
 				// this is the last board so away we go
-				return find_score(&boards[0],g);
+				return find_score(&boards[0],g).to_string();
 			}
 			println!("removing {:?}", id);
 			boards.remove(*id);
 		}
 	}
 
-	return 696969;
+	return String::from("Error, not found.");
 }

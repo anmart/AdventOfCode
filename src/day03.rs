@@ -1,5 +1,5 @@
 #[allow(dead_code)]
-pub fn part1(lines: String) -> i32{
+pub fn part1(lines: String) -> String{
 	let mut commonness: [i32; 12] = [0;12];
 	for line in lines.lines() {
 		for (i, c) in line.chars().enumerate(){
@@ -17,11 +17,11 @@ pub fn part1(lines: String) -> i32{
 			epsilon += 1;
 		}
 	}
-	return gamma * epsilon;
+	return (gamma * epsilon).to_string();
 }
 
 #[allow(dead_code)]
-pub fn part2(lines: String) -> i32{
+pub fn part2(lines: String) -> String{
 	
 	let mut commonness_oxygen: [i32; 12] = [0;12];
 	let mut commonness_co2: [i32; 12] = [0;12];
@@ -66,5 +66,5 @@ pub fn part2(lines: String) -> i32{
 		}
 	}
 
-	return (filter_oxygen as i32) * (filter_co2 as i32);
+	return ((filter_oxygen as i32) * (filter_co2 as i32)).to_string();
 }

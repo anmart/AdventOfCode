@@ -1,7 +1,7 @@
 use std::cmp::{min,max};
 
 #[allow(dead_code)]
-pub fn part1(lines: String) -> i32{
+pub fn part1(lines: String) -> String{
 	let mut board: [[u8; 1000]; 1000] = [[0; 1000]; 1000];
 	for line in lines.lines() {
 		let vals: Vec<usize> = line
@@ -36,11 +36,11 @@ pub fn part1(lines: String) -> i32{
 			}
 		}
 	}
-	return result;
+	return result.to_string();
 }
 
 #[allow(dead_code)]
-pub fn part2(lines: String) -> i32{
+pub fn part2(lines: String) -> String{
 	let mut board: [[u8; 1000]; 1000] = [[0; 1000]; 1000];
 	for line in lines.lines() {
 		let vals: Vec<usize> = line
@@ -82,5 +82,5 @@ pub fn part2(lines: String) -> i32{
 			}
 		}
 	}
-	return result;
+	return result.to_string();
 }

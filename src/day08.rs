@@ -1,5 +1,5 @@
 #[allow(dead_code)]
-pub fn part1(lines: String) -> i32{
+pub fn part1(lines: String) -> String{
 	let mut tot = 0;
 	for l in lines.lines(){
 		let z:Vec<i32> = l.split(" | ").collect::<Vec<_>>()[1].split(" ").map(|x| x.len() as i32).collect();
@@ -10,7 +10,7 @@ pub fn part1(lines: String) -> i32{
 			}
 		}
 	}
-	return tot
+	return tot.to_string();
 }
 
 pub fn substr(str1:&str, str2:&str) -> Vec<u8>{
@@ -22,7 +22,7 @@ pub fn substr(str1:&str, str2:&str) -> Vec<u8>{
 
 const _ASCII_START:u8 = 'a' as u8;
 #[allow(dead_code)]
-pub fn part2(lines: String) -> i32{	
+pub fn part2(lines: String) -> String{	
 	let mut tot = 0;
 	for l in lines.lines(){
 		let display_sets:Vec<_> = l.split(" | ").collect();
@@ -101,7 +101,7 @@ pub fn part2(lines: String) -> i32{
 		tot += value;
 		
 	}
-	return tot;
+	return tot.to_string();
 }
 /*
  *

@@ -4,7 +4,7 @@ struct Location1 {
 }
 
 #[allow(dead_code)]
-pub fn part1(lines: String) -> i32{
+pub fn part1(lines: String) -> String{
 	let mut loc = Location1{hor: 0, depth: 0};
 	for line in lines.lines() {
 		let str_len = line.len();
@@ -17,7 +17,7 @@ pub fn part1(lines: String) -> i32{
 			loc.depth += current_number;
 		}
 	}
-	return loc.hor * loc.depth;
+	return (loc.hor * loc.depth).to_string();
 }
 
 struct Location2 {
@@ -27,7 +27,7 @@ struct Location2 {
 }
 
 #[allow(dead_code)]
-pub fn part2(lines: String) -> i32{
+pub fn part2(lines: String) -> String{
 	let mut loc = Location2{hor: 0, depth: 0, aim: 0};
 	for line in lines.lines() {
 		let str_len = line.len();
@@ -41,5 +41,5 @@ pub fn part2(lines: String) -> i32{
 			loc.aim += current_number;
 		}
 	}
-	return loc.hor * loc.depth;
+	return (loc.hor * loc.depth).to_string();
 }

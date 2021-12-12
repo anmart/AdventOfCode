@@ -26,7 +26,7 @@ pub fn is_smallest(inp: &Vec<Vec<u8>>, y:usize, x:usize) -> bool{
 }
 
 #[allow(dead_code)]
-pub fn part1(lines: String) -> i32{
+pub fn part1(lines: String) -> String{
 	let mut rows: Vec<Vec<u8>> = vec!();
 	for line in lines.lines(){
 		rows.push(line.as_bytes().iter().map(|&x| x - b'0').collect());
@@ -39,11 +39,11 @@ pub fn part1(lines: String) -> i32{
 			}
 		}
 	}
-	return risk;
+	return risk.to_string();
 }
 
 #[allow(dead_code)]
-pub fn part2(lines: String) -> i32{
+pub fn part2(lines: String) -> String{
 	let mut rows: Vec<Vec<u8>> = vec!();
 	for line in lines.lines(){
 		rows.push(line.as_bytes().iter().map(|&x| x - b'0').collect());
@@ -102,6 +102,6 @@ pub fn part2(lines: String) -> i32{
 	}
 
 	basins.sort();
-	return basins.iter().rev().take(3).fold(1,|x,a| x*a);
+	return basins.iter().rev().take(3).fold(1,|x,a| x*a).to_string();
 }
 

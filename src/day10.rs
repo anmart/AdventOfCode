@@ -1,5 +1,5 @@
 #[allow(dead_code)]
-pub fn part1(lines: String) -> i32{
+pub fn part1(lines: String) -> String{
 	let mut tot = 0;
 	for line in lines.lines(){
 		let mut parse = vec!();
@@ -14,11 +14,11 @@ pub fn part1(lines: String) -> i32{
 			}
 		}
 	}
-	return tot;
+	return tot.to_string();
 }
 
 #[allow(dead_code)]
-pub fn part2(lines: String) -> u64{
+pub fn part2(lines: String) -> String{
 	let mut woog = vec!();
 	'outer: for line in lines.lines(){
 		let mut parse = vec!();
@@ -49,6 +49,6 @@ pub fn part2(lines: String) -> u64{
 	}
 	let z = woog.len() as f32 / 2.0;
 	woog.sort();
-	return woog[z as usize];
+	return woog[z as usize].to_string();
 }
 

@@ -1,5 +1,5 @@
 #[allow(dead_code)]
-pub fn part1(lines: String) -> i32{
+pub fn part1(lines: String) -> String{
 	let mut crab_rave:Vec<_> = lines.trim().split(",").map(|x| x.parse::<i32>().unwrap()).collect();
 
 	let max_val = *crab_rave.iter().max().unwrap();
@@ -9,11 +9,11 @@ pub fn part1(lines: String) -> i32{
 		all_shuffles.push(crab_rave.iter_mut().map(|x| (*x-i).abs()).sum());
 	}
 
-	return *all_shuffles.iter().min().unwrap();
+	return (*all_shuffles.iter().min().unwrap()).to_string();
 }
 
 #[allow(dead_code)]
-pub fn part2(lines: String) -> i32{
+pub fn part2(lines: String) -> String{
 	let mut crab_rave:Vec<_> = lines.trim().split(",").map(|x| x.parse::<i32>().unwrap()).collect();
 
 	let max_val = *crab_rave.iter().max().unwrap();
@@ -26,6 +26,6 @@ pub fn part2(lines: String) -> i32{
 		}).sum());
 	}
 
-	return *all_shuffles.iter().min().unwrap();
+	return (*all_shuffles.iter().min().unwrap()).to_string();
 }
 

@@ -1,5 +1,5 @@
 #[allow(dead_code)]
-pub fn part1(lines: String) -> i32{
+pub fn part1(lines: String) -> String{
 	let mut increases = 0;
 	let mut last_num = 99999;
 	for line in lines.lines() {
@@ -9,12 +9,12 @@ pub fn part1(lines: String) -> i32{
 		}
 		last_num = current_number;
 	}
-	return increases;
+	return increases.to_string();
 }
 
 const INPUT_VALUE_AMOUNT: usize = 2000;
 #[allow(dead_code)]
-pub fn part2(lines: String) -> i32{
+pub fn part2(lines: String) -> String{
 	let mut numbers: [i32; 2000] = [0;2000];	
 	for (i, line) in lines.lines().enumerate() {
 		numbers[i] = line.parse::<i32>().unwrap();
@@ -27,5 +27,5 @@ pub fn part2(lines: String) -> i32{
 			increases+=1;
 		}
 	}
-	return increases;
+	return increases.to_string();
 }

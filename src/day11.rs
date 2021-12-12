@@ -53,7 +53,7 @@ pub fn octo_step(octs: &mut Vec<Vec<u8>>, r:usize, c:usize, flashed: &mut Vec<(u
 }
 
 #[allow(dead_code)]
-pub fn part1(lines: String) -> i32{
+pub fn part1(lines: String) -> String{
 	let mut octs: Vec<Vec<u8>> = vec!();
 	for line in lines.lines(){
 		octs.push(line.as_bytes().iter().map(|&x| x - b'0').collect());
@@ -71,12 +71,12 @@ pub fn part1(lines: String) -> i32{
 			octs[r][c] = 0;
 		}
 	}
-	return ret;
+	return ret.to_string();
 
 }
 
 #[allow(dead_code)]
-pub fn part2(lines: String) -> i32{
+pub fn part2(lines: String) -> String{
 	let mut octs: Vec<Vec<u8>> = vec!();
 	for line in lines.lines(){
 		octs.push(line.as_bytes().iter().map(|&x| x - b'0').collect());
@@ -91,14 +91,14 @@ pub fn part2(lines: String) -> i32{
 		}
 
 		if flashed.len() == WIDTH*HEIGHT{
-			return i+1;
+			return ((i+1) as i32).to_string();
 		}
 
 		for (r,c) in flashed{
 			octs[r][c] = 0;
 		}
 	}
-	return 4;
+	return String::from("Error, not found.");
 
 
 }
