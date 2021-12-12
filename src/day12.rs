@@ -1,8 +1,6 @@
 
 #[allow(dead_code)]
 pub fn part1(lines: String) -> String{
-	println!("test");
-	println!("hey???");
 	return lines;
 }
 
