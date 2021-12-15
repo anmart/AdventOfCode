@@ -28,6 +28,7 @@ mod helper;
 use std::time::Instant;
 use std::process::exit;
 use helper::read_file_to_string;
+use helper::get_surrounding_nodes;
 
 fn main() {	
 

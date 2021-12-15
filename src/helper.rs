@@ -21,3 +21,25 @@ pub fn bit_string_to_u16(num: &str) -> u16{
 	}
 	return val;
 }
+
+#[allow(dead_code)]
+pub fn get_surrounding_nodes(y: usize, x: usize, w: usize, h: usize, diag: bool) -> Vec<(usize,usize)>{
+	let mut ret = vec!();
+	if x > 0{
+		ret.push((y,x-1));
+	}
+	if x < w-1{
+		ret.push((y,x+1));
+	}
+	if y > 0{
+		ret.push((y-1,x));
+	}
+	if y < h-1{
+		ret.push((y+1,x));
+	}
+	if diag{
+		panic!("OOPS haven't done diag yet sorry");
+	}
+
+	return ret;
+}
