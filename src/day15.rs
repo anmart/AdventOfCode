@@ -76,12 +76,13 @@ pub fn part2(lines: String) -> String{
 	let mut tentative_distance = vec![vec![u32::MAX; map.len()*5]; map.len()*5];
 	tentative_distance[0][0] = 0;
 
+	let loop_benchmark = std::time::Instant::now();
 	let mut tot_checked = 0;
 	open.push((0,0));
 	while open.len() > 0{
 		tot_checked += 1;
-		if tot_checked %  25_000 == 0{
-			println!("{:?}", tot_checked);
+		if tot_checked % 10_000 == 0{
+			println!("Checked: {:?}. Time elapsed so far: {:?}", tot_checked, loop_benchmark.elapsed());
 		}
 		let (y,x) = open.pop().unwrap();
 		visited.push((y,x));
@@ -89,14 +90,14 @@ pub fn part2(lines: String) -> String{
 		let dist_here = get_map_val(y,x,&map) as u32 + tentative_distance[y][x];
 		for node in surroundings{
 			if !visited.contains(&node){
-				if !open.contains(&node){
-					open.push(node);
-				}
 				let (n_y,n_x) = node;
 				if dist_here < tentative_distance[n_y][n_x]{
 					tentative_distance[n_y][n_x] = dist_here;
 					if came_from.contains_key(&node){
 						came_from.remove(&node);
+					}
+					if !open.contains(&node){
+						open.push(node);
 					}
 					came_from.insert(node,(y,x));
 				}
@@ -108,11 +109,12 @@ pub fn part2(lines: String) -> String{
 		open.sort_by_key(|k| {let (k_y,k_x) = *k; std::cmp::Reverse(tentative_distance[k_y][k_x])});
 	}
 
+	println!("Total Checked: {:?}. Total Nodes: {:?}", tot_checked, map.len()*map[0].len()*25);
+
 	let mut current = goal;
 	let mut tot: u32 = 0;
 	while came_from.contains_key(&current){ // will skip 0,0 which is good
 		let (y,x) = current;
-		println!("{:?} is {:?}", current, get_map_val(y,x,&map) );
 		tot += get_map_val(y,x,&map)as u32;
 		current = came_from[&current];
 	}
