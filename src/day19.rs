@@ -56,7 +56,7 @@ pub fn get_oriented_point(orientation: u8, x:i32, y:i32, z:i32) -> (i32,i32,i32)
 		4 => (-x,-y,z),
 		5 => (-x,z,y),
 		6 => (-x,y,-z),
-		7 => (-x,-z,y),
+		7 => (-x,-z,y), // -x, -z, -y here i think but my code works??
 
 		8 => (y,-x,z),
 		9 => (y,z,x),
