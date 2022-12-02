@@ -1,0 +1,100 @@
+Checked: 10000. Time elapsed so far: 6.346560805s
+Checked: surrounding and dist here. Time elapsed so far: 6.346923314s
+-----Checking node-----
+A: 6.347446834s
+A: 6.347594383s
+-----Checking node-----
+A: 6.348076302s
+B: 6.348204502s
+C: 6.348344871s
+D: 6.348702281s
+E: 6.348879151s
+A: 6.34901122s
+-----Checking node-----
+A: 6.34950126s
+B: 6.34965096s
+C: 6.349784479s
+D: 6.350139768s
+E: 6.350307148s
+A: 6.350465648s
+A: 6.350795597s
+Checked: 20000. Time elapsed so far: 24.883764077s
+Checked: surrounding and dist here. Time elapsed so far: 24.884059567s
+-----Checking node-----
+A: 24.884804406s
+A: 24.885022395s
+-----Checking node-----
+A: 24.885839764s
+B: 24.886016604s
+C: 24.886182293s
+D: 24.886773863s
+E: 24.886947052s
+A: 24.887131222s
+-----Checking node-----
+A: 24.887875111s
+B: 24.888050181s
+C: 24.88819711s
+D: 24.888763519s
+E: 24.888924369s
+A: 24.889100898s
+A: 24.889675847s
+Checked: 30000. Time elapsed so far: 55.705715638s
+Checked: surrounding and dist here. Time elapsed so far: 55.706027607s
+-----Checking node-----
+A: 55.706968156s
+A: 55.707143235s
+-----Checking node-----
+A: 55.708061824s
+B: 55.708231043s
+C: 55.708373903s
+D: 55.709130142s
+E: 55.709287102s
+A: 55.709448351s
+-----Checking node-----
+A: 55.71040138s
+B: 55.710589869s
+C: 55.71072733s
+D: 55.711467158s
+E: 55.711669828s
+A: 55.711845808s
+A: 55.712606536s
+Checked: 40000. Time elapsed so far: 98.888968467s
+Checked: surrounding and dist here. Time elapsed so far: 98.88930021s
+-----Checking node-----
+A: 98.890508788s
+A: 98.890694745s
+-----Checking node-----
+A: 98.892022295s
+B: 98.892203672s
+C: 98.892357312s
+D: 98.8933385s
+E: 98.893501603s
+A: 98.89367501s
+-----Checking node-----
+A: 98.894860328s
+B: 98.89507385s
+C: 98.895247097s
+D: 98.896207828s
+E: 98.896385895s
+A: 98.896566025s
+A: 98.897542436s
+Checked: 50000. Time elapsed so far: 154.314599376s
+Checked: surrounding and dist here. Time elapsed so far: 154.314901496s
+-----Checking node-----
+A: 154.316281633s
+A: 154.316443383s
+-----Checking node-----
+A: 154.317807381s
+B: 154.31799604s
+C: 154.31816547s
+D: 154.319316638s
+E: 154.319478358s
+A: 154.319674467s
+-----Checking node-----
+A: 154.321174545s
+B: 154.321369334s
+C: 154.321501094s
+D: 154.322697423s
+E: 154.322863073s
+A: 154.323079242s
+A: 154.32425097s
