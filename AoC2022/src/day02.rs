@@ -20,8 +20,7 @@ pub fn part1(lines: String) -> String{
 		score += me;
 		if me == opp + 1 { 
 			score += 3;	// tie
-		// lord help me i wanna be fast
-		} else if opp == 0 && me ==  2 || opp == 1 && me == 3 || opp == 2 && me == 1 {
+		} else if me == (opp + 1) % 3 + 1 {
 			score += 6; // win
 		}
 
@@ -41,20 +40,12 @@ pub fn part2(lines: String) -> String{
 			_ => std::process::exit(1),
 		};
 		line.next();
-		let me = match line.next().unwrap(){
-			'X' => (opp + 2) % 3 + 1,
-			'Y' => opp + 1,
-			'Z' => (opp + 1)%3 + 1,
+		match line.next().unwrap(){
+			'X' => score += (opp + 2) % 3 + 1,
+			'Y' => score += 3 + (opp + 1),
+			'Z' => score += 6 + ((opp + 1)%3 + 1),
 			_ => std::process::exit(1),
 		};
-		score += me;
-		if me == opp + 1 { 
-			score += 3;	// tie
-		// lord help me i wanna be fast
-		} else if opp == 0 && me ==  2 || opp == 1 && me == 3 || opp == 2 && me == 1 {
-			score += 6; // win
-		}
-
 	}
 	return score.to_string();
 }
